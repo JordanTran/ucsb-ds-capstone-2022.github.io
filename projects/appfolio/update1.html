@@ -458,6 +458,43 @@
    Introduction:
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about-the-project">
+   About the Project
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about-the-data">
+   About the Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-have-we-done-so-far">
+   What have we done so far
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#obstacles">
+   Obstacles
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-struggles">
+     Data Struggles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-complexity">
+     Model Complexity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#future-tasks">
+   Future Tasks
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -483,6 +520,43 @@
    Introduction:
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about-the-project">
+   About the Project
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about-the-data">
+   About the Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-have-we-done-so-far">
+   What have we done so far
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#obstacles">
+   Obstacles
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-struggles">
+     Data Struggles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-complexity">
+     Model Complexity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#future-tasks">
+   Future Tasks
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -496,7 +570,53 @@
 <h1>Update 1 - Project Updates<a class="headerlink" href="#update-1-project-updates" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction:<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>Appfolio is a tech company based in Santa Barbara that provides innovative software, services, and data analytics to the real estate industry.  They specialize in being “100% Customer Focused” with services that fit the needs of different types of businesses. Their most popular and successful platform is their Property Management service, which we are currently working with</p>
+<p>Appfolio is a tech company based in Santa Barbara that provides innovative software, services, and data analytics to the real estate industry.  They specialize in being “100% Customer Focused” with services that fit the needs of different types of businesses. Their most popular and successful platform is their Property Management service, which we are currently working with.</p>
+</div>
+<div class="section" id="about-the-project">
+<h2>About the Project<a class="headerlink" href="#about-the-project" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="about-the-data">
+<h2>About the Data<a class="headerlink" href="#about-the-data" title="Permalink to this headline">¶</a></h2>
+<p>Our dataset is derived from a LISA AI chatbot that divides the data into three components: user ratings, item features, and images.</p>
+<p>In our ratings data, we have a unique identifier for the property and the user along with the leasing attribution source and the type of interaction. The interaction type can be one of four scenarios; a user can deny a property, inquire about a property, accept a showing for a property, or confirm the showing by making an appearance. We use these interaction types as our response variable to gauge levels of interest in user-property pairs.</p>
+<p>Our “item features” dataset is linked to the user matrix by the user ID. Within this set, we are given 15 unique features that comprise the makeup of a property and can be used to distinguish from other properties. An example of some of these features include property type (single family residence vs. multiple family residence), the number of rentable units, the date that it appears on the market, and the latitude and longitude.</p>
+<p>The final partition of the data is the set of images that correspond to the properties within the other two segments of the data.</p>
+</div>
+<div class="section" id="what-have-we-done-so-far">
+<h2>What have we done so far<a class="headerlink" href="#what-have-we-done-so-far" title="Permalink to this headline">¶</a></h2>
+<p>Currently working in teams to clean the data and test out different recommender system models.</p>
+<p>For the data cleaning, we’ve communicated with the sponsor about what the different attributes in the data represent and how it can add as a feature in our model. We’ve changed the current INTERACTION_TYPE, or ratings to numbers so they can be used in the Experimental Library we are using. In addition, will will begin experimenting different rating ranges soon (i.e. using 1-4 or 0-3).</p>
+<p>For the Model Testing, we’ve taken the time to understand the libraries and recommender system concepts that we will be using. Our models are tested using Cornac which makes it easier to test and experiment with multiple different multimodal recommender systems. In addition, this team is focused on applying the BiLateral Variational Autoencoder recommender system to our final project. Right now, we are building a simple model with a smaller dataset with no images.</p>
+<p>We are currently meeting weekly with Appfolio’s CS Capstone to help them with their current recommendations on their website.</p>
+</div>
+<div class="section" id="obstacles">
+<h2>Obstacles<a class="headerlink" href="#obstacles" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="data-struggles">
+<h3>Data Struggles<a class="headerlink" href="#data-struggles" title="Permalink to this headline">¶</a></h3>
+<p>Our data consisted of uninformative labels and unintuitive names for values which gave us questions to research and ask our sponsors about . We created a documentation page for our entire dataset so we can use it for quick reference and help future collaborators understand our data. The “item features” dataset includes many null observations which we are unsure on how best to deal with. Our options include dropping the observations that include null values and increasing our precision on the data that we do include, but we would miss out on valuable information regarding recommending the properties we left out. Our other option is to find a way to work around the null observations and perhaps figure out a way to derive default values for these observations.</p>
+</div>
+<div class="section" id="model-complexity">
+<h3>Model Complexity<a class="headerlink" href="#model-complexity" title="Permalink to this headline">¶</a></h3>
+<p>It has been a learning curve to understand how recommender systems work. Our chosen model consists of four encoders and one decoder to make item recommendations. It has been a puzzle deciphering the research paper for our model and getting it working to train. Lots of data and a complex model makes training time increase tremendously. It currently takes over thirty minutes for one epoch and our model needs a considerable amount of epochs to be accurate. We talked with our sponsors and set up a notebook on Google cloud that enables us to use GPUs to train more efficiently.</p>
+</div>
+</div>
+<div class="section" id="future-tasks">
+<h2>Future Tasks<a class="headerlink" href="#future-tasks" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Continue learning about the Bilateral Variational Autoencoder</p></li>
+<li><p>Clean the larger dataset that includes the properties of the CS capstone team’s database</p></li>
+<li><p>Consider other ways to deal with missing data without removing it</p></li>
+<li><p>Find default values in replacement with missing data</p></li>
+<li><p>Update our model to suit the CS team capstone’s website</p></li>
+<li><p>Figure out a way to map between our dataset and the CS capstone team’s dataset</p></li>
+<li><p>Implement our prediction model to the CS capstone team’s website (see image of CS team’s website below)</p></li>
+</ol>
+<p>For next quarter:</p>
+<p>Upgrade our model with complex features including:</p>
+<ul class="simple">
+<li><p>Images</p></li>
+<li><p>Latitude and longitude of property</p></li>
+</ul>
 </div>
 </div>
 
